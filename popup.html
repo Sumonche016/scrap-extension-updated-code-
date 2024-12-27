@@ -1,0 +1,178 @@
+<!-- capture by extension  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Landing Page Ripper</title>
+  <style>
+    body {
+      width: 250px;
+      padding: 20px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    h3 {
+      margin-top: 20px;
+      margin-bottom: 15px;
+      color: #4a4a4a;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      color: white;
+      background-color: #5a68c7;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      background-color: #4a56a5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    button:active {
+      background-color: #3a4584;
+      transform: translateY(0);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* New styles for social buttons and footer */
+    .social-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .social-button {
+      width: 48%;
+      padding: 10px;
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-button img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .footer a {
+      color: #5a68c7;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #3a4584;
+      text-decoration: underline;
+    }
+
+    .red-heart {
+      color: #ff0000;
+      font-size: 16px;
+      vertical-align: middle;
+      /* Align the heart vertically */
+    }
+
+    .loading {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: red;
+    }
+
+    .done {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: green;
+    }
+
+    #progress-container {
+      width: 100%;
+      background-color: #f0f0f0;
+      margin-top: 10px;
+    }
+
+    #progress-bar {
+      width: 0%;
+      height: 20px;
+      background-color: #4CAF50;
+      text-align: center;
+      line-height: 20px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="email-form" style="display: none;">
+    <h3>Please enter your email to continue</h3>
+    <input type="email" id="user-email" placeholder="Enter your email"
+      style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ddd;">
+    <button id="submit-email-btn">Submit</button>
+  </div>
+
+  <div id="main-content" style="display: none;">
+    <button id="capture-tab-btn">Capture Tab</button>
+    <button id="capture-tab-source-btn">Capture Tab Source</button>
+
+    <div id="loading-text" style="display: none;">Processing, please wait...</div>
+    <div id="done-text" style="display: none;">Done processing!</div>
+
+    <div id="progress-container" style="display: none;">
+      <div id="progress-bar"></div>
+      <div id="progress-text">0%</div>
+    </div>
+
+    <h3>Order for Cleaning:</h3>
+    <div class="social-buttons">
+      <a href="https://join.skype.com/invite/HIhoNmifaXOl" target="_blank" class="social-button">
+        <img src="skype-icon.png" alt="Skype" />
+      </a>
+      <a href="https://t.me/sethinitin" target="_blank" class="social-button">
+        <img src="telegram-icon.png" alt="Telegram" />
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    Made with <span class="red-heart">&#x1F496;</span> by
+    <a href="https://thelanders.club/" target="_blank">thelanders.club</a>
+  </div>
+
+  <!-- <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div> -->
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
